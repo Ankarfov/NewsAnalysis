@@ -1,2 +1,2 @@
-# NewsAnalysis
-.NET Demo Project
+# News Analyse Project
+.NET Demo Project (Run with /swagger/index.html)
