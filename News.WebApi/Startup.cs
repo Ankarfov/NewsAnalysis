@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
-using News.Application;
+﻿using News.Application;
 using News.Persistence;
+using News.WebApi.Middleware;
 
 namespace News.WebApi
 {
@@ -41,7 +40,11 @@ namespace News.WebApi
 
             app.UseSwaggerUI();
 
+            app.UseExceptionHandlerMilldeware();
+
             app.UseRouting();
+
+            app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {
